@@ -1,28 +1,15 @@
-# Даны два целых числа A и B (при этом A ≤ B). Выведите все числа от A до B включительно.
-f = int(input())
-g = int(input())
+print("Сколко должно быть карточки:")
+N = int(input())
+i = list()
+g = 1
+s1 = N
+s2 = 0
+print("Указите цифры всех карточек на столе:")
+if(i <= N):
+    g = i.append(1)*N
 
+"""for i in range(1, N):
+    s1 += i
+    s2 += int(input())"""
+print("Потерянная карточка:",g)
 
-class MyNumbers:
-    def __iter__(self):
-        self.a = f
-        return self
-
-    def __next__(self):
-        if self.a <= g:
-            x = self.a
-            self.a += 1  # реалицазия условии for здесь работает
-            return x
-        else:
-            raise StopIteration
-
-
-myclass = MyNumbers()
-myiter = iter(myclass)
-
-print(next(myiter))
-print(next(myiter))
-print(next(myiter))
-print(next(myiter))
-print(next(myiter))
-print(next(myiter))
